@@ -49,7 +49,7 @@
       bindings = <
                  &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &none  &bt BT_CLR   &bt BT_NXT   &bt BT_PRV   &kp RALT
                  &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &none  &none        &none        &none        &kp RCTRL
-                 &kp F11   &kp F12   &kp PSCRN &none     &none     &none  &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &kp RSHFT
+                 &kp F11   &kp F12   &kp PSCRN &reset &bootloader  &none  &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &kp RSHFT
                  &trans &trans                                     &trans &trans
                  >;
     };
