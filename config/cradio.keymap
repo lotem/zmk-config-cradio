@@ -27,7 +27,7 @@
                  &lt 1 Q &kp W &kp E &kp R &kp T                   &kp Y &kp U &kp I &kp O &lt 1 P
                  &lt 2 A &kp S &kp D &kp F &kp G                   &kp H &kp J &kp K &kp L &lt 2 SEMI
                  &mt LSHFT Z &kp X &kp C &kp V &kp B               &kp N &kp M &kp COMMA &kp DOT &mt RSHFT SLASH
-                 &mt LCTRL RET &mt LALT ESC                        &mt LCMD BSPC &kp SPACE
+                 &mt LALT ESC &mt LCTRL RET                        &kp SPACE &mt LCMD BSPC
                  >;
     };
 
@@ -36,7 +36,7 @@
                  &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT &kp CARET &kp AMPS  &kp ASTRK &kp PIPE  &kp BSLH
                  &kp GRAVE &kp APOS  &kp LPAR  &kp RPAR  &kp DQT   &kp PLUS  &kp MINUS &kp UNDER &kp COLON &kp SEMI
                  &kp TILDE &kp LBKT  &kp LBRC  &kp RBRC  &kp RBKT  &kp QMARK &kp EQUAL &kp LT    &kp GT    &kp SLASH
-                 &sk LCTRL &sk LALT                                &sk LCMD  &lt 3 SPACE
+                 &sk LALT  &sk LCTRL                               &lt 3 SPACE &sk LCMD
                  >;
     };
 
@@ -45,7 +45,7 @@
                  &kp INS   &kp HOME  &kp UP    &kp END   &kp DEL   &kp PLUS  &kp N7    &kp N8    &kp N9    &kp MINUS
                  &kp ESC   &kp LEFT  &kp DOWN  &kp RIGHT &kp TAB   &kp DOT   &kp N4    &kp N5    &kp N6    &kp COLON
                  &kp CAPS  &kp K_APP &kp PG_UP &kp PG_DN &kp BSPC  &kp N0    &kp N1    &kp N2    &kp N3    &kp SLASH
-                 &sk LCTRL &sk LALT                                &sk LCMD  &lt 3 SPACE
+                 &sk LALT  &sk LCTRL                               &lt 3 SPACE &sk LCMD
                  >;
     };
 
