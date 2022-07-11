@@ -20,13 +20,39 @@
 
 / {
 
+  behaviors {
+    td_lo_a: tap_dance_lower_a {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_LOWER_A";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&lt 1 A>, <&sl 2>, <&sl 3>;
+    };
+
+    td_lo_sc: tap_dance_lower_semicolon {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_LOWER_SEMICOLON";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&lt 1 SEMI>, <&sl 2>, <&sl 3>;
+    };
+
+    td_sf_z: tap_dance_shift_z {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_SHIFT_Z";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&mt LSHFT Z>, <&caps_word>;
+    };
+  };
+
   keymap {
     compatible = "zmk,keymap";
     default_layer {
       bindings = <
-                 &lt 2 Q &kp W &kp E &kp R &kp T                   &kp Y &kp U &kp I &kp O &lt 2 P
-                 &lt 1 A &kp S &kp D &kp F &kp G                   &kp H &kp J &kp K &kp L &lt 1 SEMI
-                 &mt LSHFT Z &kp X &kp C &kp V &kp B               &kp N &kp M &kp COMMA &kp DOT &mt RSHFT SLASH
+                 &kp Q &kp W &kp E &kp R &kp T                     &kp Y &kp U &kp I &kp O &kp P
+                 &td_lo_a &kp S &kp D &kp F &kp G                  &kp H &kp J &kp K &kp L &td_lo_sc
+                 &td_sf_z &kp X &kp C &kp V &kp B                  &kp N &kp M &kp COMMA &kp DOT &mt RSHFT SLASH
                  &mt LCTRL RET &mt LALT ESC                        &mt LCMD BSPC &kp SPACE
                  >;
     };
@@ -36,7 +62,7 @@
                  &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT &kp CARET &kp AMPS  &kp ASTRK &kp PIPE  &kp BSLH
                  &kp GRAVE &kp APOS  &kp LPAR  &kp RPAR  &kp DQT   &kp PLUS  &kp MINUS &kp UNDER &kp COLON &kp SEMI
                  &kp TILDE &kp LBKT  &kp LBRC  &kp RBRC  &kp RBKT  &kp QMARK &kp EQUAL &kp LT    &kp GT    &kp SLASH
-                 &sk LCTRL &sk LALT                                &sk LCMD  &lt 3 SPACE
+                 &sk LCTRL &sk LALT                                &sk LCMD &mt LSHFT SPACE
                  >;
     };
 
@@ -45,16 +71,16 @@
                  &kp INS   &kp HOME  &kp UP    &kp END   &kp DEL   &kp PLUS  &kp N7    &kp N8    &kp N9    &kp MINUS
                  &kp ESC   &kp LEFT  &kp DOWN  &kp RIGHT &kp TAB   &kp DOT   &kp N4    &kp N5    &kp N6    &kp COLON
                  &kp CAPS  &kp K_APP &kp PG_UP &kp PG_DN &kp BSPC  &kp N0    &kp N1    &kp N2    &kp N3    &kp SLASH
-                 &sk LCTRL &sk LALT                                &sk LCMD  &lt 3 SPACE
+                 &sk LCTRL &sk LALT                                &sk LCMD &mt LSHFT SPACE
                  >;
     };
 
     tri_layer {
       bindings = <
-                 &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &none  &bt BT_CLR   &bt BT_NXT   &bt BT_PRV   &kp RALT
-                 &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp RCTRL
-                 &kp F11   &kp F12   &kp PSCRN &reset &bootloader  &none  &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &kp RSHFT
-                 &trans &trans                                     &trans &trans
+                 &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &none  &bt BT_CLR   &bt BT_NXT   &bt BT_PRV   &none
+                 &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none
+                 &kp F11   &kp F12   &kp PSCRN &reset &bootloader  &none  &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &none
+                 &sk RCTRL &sk RALT                                &sk RCMD &sk RSHFT
                  >;
     };
 
