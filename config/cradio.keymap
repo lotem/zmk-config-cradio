@@ -35,17 +35,17 @@
     left_layer {
       bindings = <
                  &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT &kp CARET &kp AMPS  &kp ASTRK &kp PIPE  &kp BSLH
-                 &kp GRAVE &kp APOS  &kp LPAR  &kp RPAR  &kp DQT   &kp PLUS  &kp MINUS &kp UNDER &kp COLON &lt 3 SEMI
-                 &kp TILDE &kp LBKT  &kp LBRC  &kp RBRC  &kp RBKT  &kp QMARK &kp EQUAL &kp LT    &kp GT    &kp SLASH
+                 &kp GRAVE &kp APOS  &kp LPAR  &kp RPAR  &kp DQT   &kp PLUS  &kp MINUS &kp UNDER &kp COLON &kp SEMI
+                 &kp TILDE &kp LBKT  &kp LBRC  &kp RBRC  &kp RBKT  &kp QMARK &kp EQUAL &kp LT    &kp GT    &lt 3 SLASH
                  &sk LCTRL &sk LALT                                &sk LCMD  &mt LSHFT SPACE
                  >;
     };
 
     right_layer {
       bindings = <
-                 &kp INS   &kp HOME  &kp UP    &kp END   &kp DEL   &kp PLUS  &kp N7    &kp N8    &kp N9    &lt 3 MINUS
+                 &kp INS   &kp HOME  &kp UP    &kp END   &kp DEL   &kp PLUS  &kp N7    &kp N8    &kp N9    &kp MINUS
                  &kp ESC   &kp LEFT  &kp DOWN  &kp RIGHT &kp TAB   &kp DOT   &kp N4    &kp N5    &kp N6    &kp COLON
-                 &kp CAPS  &kp K_APP &kp PG_UP &kp PG_DN &kp BSPC  &kp N0    &kp N1    &kp N2    &kp N3    &kp SLASH
+                 &kp CAPS  &kp K_APP &kp PG_UP &kp PG_DN &kp BSPC  &kp N0    &kp N1    &kp N2    &kp N3    &lt 3 SLASH
                  &sk LCTRL &sk LALT                                &sk LCMD  &mt LSHFT SPACE
                  >;
     };
