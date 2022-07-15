@@ -9,6 +9,12 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#define DEFLT 0
+#define QWRTY 1
+#define LOWER 2
+#define RAISE 3
+#define ADJST 4
+
 &mt {
   tapping-term-ms = <200>;
   quick-tap-ms = <200>;
@@ -25,36 +31,45 @@
     compatible = "zmk,keymap";
     default_layer {
       bindings = <
-                 &lt 2 Q &kp W &kp E &kp R &kp T                   &kp Y &kp U &kp I &kp O &lt 2 P
-                 &lt 1 A &kp S &kp D &kp F &kp G                   &kp H &kp J &kp K &kp L &lt 1 SEMI
+                 &lt RAISE Q &kp W &kp F &kp P &kp B               &kp J &kp L &kp U &kp Y &lt RAISE SEMI
+                 &lt LOWER A &kp R &kp S &kp T &kp G               &kp M &kp N &kp E &kp I &lt LOWER O
+                 &mt LSHFT Z &kp X &kp C &kp D &kp V               &kp K &kp H &kp COMMA &kp DOT &mt RSHFT SLASH
+                 &mt LCTRL RET &mt LALT ESC                        &mt LCMD BSPC &kp SPACE
+                 >;
+    };
+
+    qwerty_layer {
+      bindings = <
+                 &lt RAISE Q &kp W &kp E &kp R &kp T               &kp Y &kp U &kp I &kp O &lt RAISE P
+                 &lt LOWER A &kp S &kp D &kp F &kp G               &kp H &kp J &kp K &kp L &lt LOWER SEMI
                  &mt LSHFT Z &kp X &kp C &kp V &kp B               &kp N &kp M &kp COMMA &kp DOT &mt RSHFT SLASH
                  &mt LCTRL RET &mt LALT ESC                        &mt LCMD BSPC &kp SPACE
                  >;
     };
 
-    left_layer {
+    lower_layer {
       bindings = <
                  &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT &kp CARET &kp AMPS  &kp ASTRK &kp PIPE  &kp BSLH
-                 &kp GRAVE &kp APOS  &kp LPAR  &kp RPAR  &kp DQT   &kp PLUS  &kp MINUS &kp UNDER &kp COLON &lt 3 SEMI
+                 &kp GRAVE &kp APOS  &kp LPAR  &kp RPAR  &kp DQT   &kp PLUS  &kp MINUS &kp UNDER &kp COLON &lt ADJST SEMI
                  &kp TILDE &kp LBKT  &kp LBRC  &kp RBRC  &kp RBKT  &kp QMARK &kp EQUAL &kp LT    &kp GT    &kp SLASH
                  &sk LCTRL &sk LALT                                &sk LCMD  &mt LSHFT SPACE
                  >;
     };
 
-    right_layer {
+    raise_layer {
       bindings = <
-                 &kp INS   &kp HOME  &kp UP    &kp END   &kp DEL   &kp PLUS  &kp N7    &kp N8    &kp N9    &lt 3 MINUS
+                 &kp INS   &kp HOME  &kp UP    &kp END   &kp DEL   &kp PLUS  &kp N7    &kp N8    &kp N9    &lt ADJST MINUS
                  &kp ESC   &kp LEFT  &kp DOWN  &kp RIGHT &kp TAB   &kp DOT   &kp N4    &kp N5    &kp N6    &kp COLON
                  &kp CAPS  &kp K_APP &kp PG_UP &kp PG_DN &kp BSPC  &kp N0    &kp N1    &kp N2    &kp N3    &kp SLASH
                  &sk LCTRL &sk LALT                                &sk LCMD  &mt LSHFT SPACE
                  >;
     };
 
-    tri_layer {
+    adjust_layer {
       bindings = <
                  &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
                  &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &bt BT_CLR   &bt BT_NXT   &bt BT_PRV   &out OUT_TOG &none
-                 &kp F11   &kp F12   &kp PSCRN &reset &bootloader  &none        &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &none
+                 &kp F11   &kp F12   &kp PSCRN &to DEFLT &to QWRTY &bootloader  &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &reset
                  &sk RCTRL &sk RALT                                &sk RCMD &sk RSHFT
                  >;
     };
