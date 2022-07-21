@@ -10,9 +10,10 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFLT 0
-#define LOWER 1
-#define RAISE 2
-#define ADJST 3
+#define ALTER 1
+#define LOWER 2
+#define RAISE 3
+#define ADJST 4
 
 &mt {
   flavor = "hold-preferred";
@@ -59,6 +60,15 @@
                  >;
     };
 
+    alter_layer {
+      bindings = <
+                 &lt ADJST Q &kp W &kp D &kp R &kp F               &kp Y &kp U &kp K &kp L &adjust_p
+                 &lt RAISE A &kp S &kp E &kp T &kp G               &kp H &kp N &kp I &kp O &mt RALT SEMI
+                 &mt LSHFT Z &kp X &kp C &kp V &kp B               &kp J &kp M &kp COMMA &kp DOT &mt RSHFT SLASH
+                 &tlt LOWER RET &mt LCTRL ESC                      &mt LCMD BSPC &kp SPACE
+                 >;
+    };
+
     lower_layer {
       bindings = <
                  &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT &kp CARET &kp AMPS  &kp ASTRK &kp PIPE  &kp BSLH
@@ -81,7 +91,7 @@
       bindings = <
                  &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
                  &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &bt BT_CLR   &bt BT_NXT   &bt BT_PRV   &out OUT_TOG &kp RALT
-                 &kp F11   &kp F12   &kp PSCRN &none     &none     &bootloader  &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &kp RSHFT
+                 &kp F11   &kp F12   &kp PSCRN &to DEFLT &to ALTER &bootloader  &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &kp RSHFT
                  &sk RALT  &sk RCTRL                               &sk RCMD     &sk RSHFT
                  >;
     };
