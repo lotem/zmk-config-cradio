@@ -39,6 +39,14 @@
       bindings = <&mo>, <&kp>;
     };
 
+    td_c_a_esc: tap_dance_ctrl_alt_esc {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_CTRL_ALT_ESC";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&mt LCTRL ESC>, <&kp LALT>;
+    };
+
     adjust_p: adjust_p {
       compatible = "zmk,behavior-mod-morph";
       label = "ADJUST_P";
@@ -55,7 +63,7 @@
                  &lt ADJST Q &kp W &kp E &kp R &kp T               &kp Y &kp U &kp I &kp O &adjust_p
                  &lt RAISE A &kp S &kp D &kp F &kp G               &kp H &kp J &kp K &kp L &mt RALT SEMI
                  &mt LSHFT Z &kp X &kp C &kp V &kp B               &kp N &kp M &kp COMMA &kp DOT &mt RSHFT SLASH
-                 &tlt LOWER RET &mt LCTRL ESC                      &mt LCMD BSPC &kp SPACE
+                 &tlt LOWER RET &td_c_a_esc                        &mt LCMD BSPC &kp SPACE
                  >;
     };
 
