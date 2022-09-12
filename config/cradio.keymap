@@ -39,28 +39,12 @@
       bindings = <&mo>, <&kp>;
     };
 
-    td_ctrl_alt: tap_dance_ctrl_alt {
-      compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_CTRL_ALT";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&sk LCTRL>, <&sk LALT>;
-    };
-
-    td_cmd_alt: tap_dance_cmd_alt {
-      compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_CMD_ALT";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&sk LCMD>, <&sk RALT>;
-    };
-
-    adjust_p: adjust_p {
+    alt_p: mod_morph_alt_p {
       compatible = "zmk,behavior-mod-morph";
-      label = "ADJUST_P";
+      label = "MOD_MORPH_ALT_P";
       #binding-cells = <0>;
-      bindings = <&lt ADJST P>, <&kp P>;
-      mods = <(MOD_LCTL|MOD_LALT|MOD_RCTL|MOD_RALT)>;
+      bindings = <&mt RALT P>, <&kp P>;
+      mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
     };
   };
 
@@ -68,37 +52,37 @@
     compatible = "zmk,keymap";
     default_layer {
       bindings = <
-                 &lt ADJST Q &kp W &kp E &kp R &kp T               &kp Y &kp U &kp I &kp O &adjust_p
-                 &lt RAISE A &kp S &kp D &kp F &kp G               &kp H &kp J &kp K &kp L &mt RALT SEMI
+                 &mt LALT Q  &kp W &kp E &kp R &kp T               &kp Y &kp U &kp I &kp O &alt_p
+                 &mt LCTRL A &kp S &kp D &kp F &kp G               &kp H &kp J &kp K &kp L &mt RCTRL SEMI
                  &mt LSHFT Z &kp X &kp C &kp V &kp B               &kp N &kp M &kp COMMA &kp DOT &mt RSHFT SLASH
-                 &tlt LOWER RET &mt LCTRL ESC                      &mt LCMD BSPC &kp SPACE
+                 &tlt LOWER RET &tlt RAISE ESC                     &mt LCMD BSPC &kp SPACE
                  >;
     };
 
     lower_layer {
       bindings = <
-                 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT &kp CARET &kp AMPS  &kp ASTRK &kp PIPE  &kp BSLH
-                 &kp GRAVE &kp APOS  &kp LPAR  &kp RPAR  &kp DQT   &kp PLUS  &kp MINUS &kp UNDER &kp COLON &mt RALT SEMI
-                 &kp TILDE &kp LBKT  &kp LBRC  &kp RBRC  &kp RBKT  &kp QMARK &kp EQUAL &kp LT    &kp GT    &mt RSHFT SLASH
-                 &sk LSHFT &td_ctrl_alt                            &td_cmd_alt &mt RSHFT SPACE
+                 &mt LALT EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT &kp CARET &kp AMPS  &kp ASTRK &kp PIPE  &mt RALT BSLH
+                 &mt LCTRL GRAVE &kp APOS  &kp LPAR  &kp RPAR  &kp DQT   &kp PLUS  &kp MINUS &kp UNDER &kp COLON &mt RCTRL SEMI
+                 &mt LSHFT TILDE &kp LBKT  &kp LBRC  &kp RBRC  &kp RBKT  &kp QMARK &kp EQUAL &kp LT    &kp GT    &mt RSHFT SLASH
+                 &mo ADJST       &mo ADJST                               &sk LCMD  &kp SPACE
                  >;
     };
 
     raise_layer {
       bindings = <
-                 &kp INS   &kp HOME  &kp UP    &kp END   &kp DEL   &kp PLUS  &kp N7    &kp N8    &kp N9    &kp MINUS
-                 &kp ESC   &kp LEFT  &kp DOWN  &kp RIGHT &kp TAB   &kp DOT   &kp N4    &kp N5    &kp N6    &mt RALT COLON
-                 &kp CAPS  &kp K_APP &kp PG_UP &kp PG_DN &kp BSPC  &kp N0    &kp N1    &kp N2    &kp N3    &mt RSHFT SLASH
-                 &sk LSHFT &td_ctrl_alt                            &td_cmd_alt &mt RSHFT SPACE
+                 &mt LALT INS   &kp HOME  &kp UP    &kp END   &kp DEL   &kp PLUS  &kp N7    &kp N8    &kp N9    &mt RALT MINUS
+                 &mt LCTRL ESC  &kp LEFT  &kp DOWN  &kp RIGHT &kp TAB   &kp DOT   &kp N4    &kp N5    &kp N6    &mt RCTRL COLON
+                 &mt LSHFT CAPS &kp K_APP &kp PG_UP &kp PG_DN &kp BSPC  &kp N0    &kp N1    &kp N2    &kp N3    &mt RSHFT SLASH
+                 &mo ADJST      &mo ADJST                               &sk RCMD  &kp SPACE
                  >;
     };
 
     adjust_layer {
       bindings = <
-                 &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &bt BT_PRV &none        &none        &none        &out OUT_TOG
-                 &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &bt BT_CLR &none        &none        &none        &kp RALT
-                 &kp F11   &kp F12   &kp PSCRN &reset &bootloader  &bt BT_NXT &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &kp RSHFT
-                 &sk LSHFT &td_ctrl_alt                            &td_cmd_alt &sk RSHFT
+                 &mt LALT F1   &kp F2    &kp F3    &kp F4       &kp F5       &bt BT_PRV &none      &none        &none        &kp RALT
+                 &mt LCTRL F6  &kp F7    &kp F8    &kp F9       &kp F10      &bt BT_CLR &none      &none        &none        &kp RCTRL
+                 &mt LSHFT F11 &kp F12   &kp PSCRN &out OUT_BLE &out OUT_USB &bt BT_NXT &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp RSHFT
+                 &none         &none                                         &none      &none
                  >;
     };
 
