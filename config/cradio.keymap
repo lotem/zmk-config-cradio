@@ -39,12 +39,20 @@
       bindings = <&mo>, <&kp>;
     };
 
-    td_c_a_esc: tap_dance_ctrl_alt_esc {
+    td_ctrl_alt: tap_dance_ctrl_alt {
       compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_CTRL_ALT_ESC";
+      label = "TAP_DANCE_CTRL_ALT";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
-      bindings = <&mt LCTRL ESC>, <&kp LALT>;
+      bindings = <&sk LCTRL>, <&sk LALT>;
+    };
+
+    td_cmd_alt: tap_dance_cmd_alt {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_CMD_ALT";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&sk LCMD>, <&sk RALT>;
     };
 
     adjust_p: adjust_p {
@@ -63,7 +71,7 @@
                  &lt ADJST Q &kp W &kp E &kp R &kp T               &kp Y &kp U &kp I &kp O &adjust_p
                  &lt RAISE A &kp S &kp D &kp F &kp G               &kp H &kp J &kp K &kp L &mt RALT SEMI
                  &mt LSHFT Z &kp X &kp C &kp V &kp B               &kp N &kp M &kp COMMA &kp DOT &mt RSHFT SLASH
-                 &tlt LOWER RET &td_c_a_esc                        &mt LCMD BSPC &kp SPACE
+                 &tlt LOWER RET &mt LCTRL ESC                      &mt LCMD BSPC &kp SPACE
                  >;
     };
 
@@ -72,7 +80,7 @@
                  &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT &kp CARET &kp AMPS  &kp ASTRK &kp PIPE  &kp BSLH
                  &kp GRAVE &kp APOS  &kp LPAR  &kp RPAR  &kp DQT   &kp PLUS  &kp MINUS &kp UNDER &kp COLON &mt RALT SEMI
                  &kp TILDE &kp LBKT  &kp LBRC  &kp RBRC  &kp RBKT  &kp QMARK &kp EQUAL &kp LT    &kp GT    &mt RSHFT SLASH
-                 &sk LALT  &sk LCTRL                               &sk LCMD  &mt LSHFT SPACE
+                 &sk LSHFT &td_ctrl_alt                            &td_cmd_alt &mt RSHFT SPACE
                  >;
     };
 
@@ -81,7 +89,7 @@
                  &kp INS   &kp HOME  &kp UP    &kp END   &kp DEL   &kp PLUS  &kp N7    &kp N8    &kp N9    &kp MINUS
                  &kp ESC   &kp LEFT  &kp DOWN  &kp RIGHT &kp TAB   &kp DOT   &kp N4    &kp N5    &kp N6    &mt RALT COLON
                  &kp CAPS  &kp K_APP &kp PG_UP &kp PG_DN &kp BSPC  &kp N0    &kp N1    &kp N2    &kp N3    &mt RSHFT SLASH
-                 &sk LALT  &sk LCTRL                               &sk LCMD  &mt LSHFT SPACE
+                 &sk LSHFT &td_ctrl_alt                            &td_cmd_alt &mt RSHFT SPACE
                  >;
     };
 
@@ -90,7 +98,7 @@
                  &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &bt BT_PRV &none        &none        &none        &out OUT_TOG
                  &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &bt BT_CLR &none        &none        &none        &kp RALT
                  &kp F11   &kp F12   &kp PSCRN &reset &bootloader  &bt BT_NXT &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &kp RSHFT
-                 &sk RALT  &sk RCTRL                               &sk RCMD   &sk RSHFT
+                 &sk LSHFT &td_ctrl_alt                            &td_cmd_alt &sk RSHFT
                  >;
     };
 
