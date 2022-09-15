@@ -54,7 +54,7 @@
       label = "MOD_MORPH_ALT_P";
       #binding-cells = <0>;
       bindings = <&mt RALT P>, <&kp P>;
-      mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
+      mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT)>;
     };
   };
 
