@@ -65,7 +65,7 @@
                  &lt ADJST Q &kp W &kp E &kp R &kp T               &kp Y &kp U &kp I &kp O &adjust_p
                  &lt RAISE A &kp S &kp D &kp F &kp G               &kp H &kp J &kp K &kp L &mp RALT SEMI
                  &mt LSHFT Z &kp X &kp C &kp V &kp B               &kp N &kp M &kp COMMA &kp DOT &mp RSHFT SLASH
-                 &lp LOWER RET &mp LCTRL ESC                       &mp LCMD BSPC &kp SPACE
+                 &lp LOWER RET &mp LCTRL TAB                       &mp LCMD BSPC &kp SPACE
                  >;
     };
 
@@ -80,9 +80,9 @@
 
     raise_layer {
       bindings = <
-                 &kp ESC   &none     &none     &none     &kp LS(TAB) &kp DEL &kp PG_UP &kp UP    &kp PG_DN &kp INS
-                 &none     &none     &none     &none     &kp TAB   &kp BSPC  &kp LEFT  &kp DOWN  &kp RIGHT &kp ENTER
-                 &kp CAPS  &kp K_APP &none     &none     &kp GRAVE &kp TILDE &kp UNDER &kp HOME  &kp END   &kp PIPE
+                 &kp CAPS  &none     &none     &none     &kp TAB   &kp DEL   &kp PG_UP &kp UP    &kp PG_DN &kp INS
+                 &none     &none     &none     &none     &kp ESC   &kp BSPC  &kp LEFT  &kp DOWN  &kp RIGHT &kp ENTER
+                 &kp K_APP &none     &none     &none     &kp GRAVE &kp TILDE &kp UNDER &kp HOME  &kp END   &kp PIPE
                  &sk LALT  &sk LCTRL                               &sk LCMD  &trans
                  >;
     };
