@@ -80,9 +80,9 @@
 
     raise_layer {
       bindings = <
-                 &kp CAPS  &none     &none     &none     &kp TAB   &kp DEL   &kp PG_UP &kp UP    &kp PG_DN &kp INS
-                 &none     &none     &none     &none     &kp ESC   &kp BSPC  &kp LEFT  &kp DOWN  &kp RIGHT &kp ENTER
-                 &kp K_APP &none     &none     &none     &kp GRAVE &kp TILDE &kp UNDER &kp HOME  &kp END   &kp PIPE
+                 &kp CAPS  &none     &none     &none     &kp ESC   &kp DEL   &kp PG_UP &kp UP    &kp PG_DN &kp INS
+                 &none     &none     &none     &none     &kp TAB   &kp BSPC  &kp LEFT  &kp DOWN  &kp RIGHT &kp UNDER
+                 &kp K_APP &none     &none     &none     &kp GRAVE &kp TILDE &kp ENTER &kp HOME  &kp END   &kp PIPE
                  &sk LALT  &sk LCTRL                               &sk LCMD  &trans
                  >;
     };
