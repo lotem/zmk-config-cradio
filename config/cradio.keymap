@@ -44,17 +44,9 @@
       label = "LAYER_PREFERRED";
       flavor = "hold-preferred";
       tapping-term-ms = <200>;
-      quick-tap-ms = <0>;
+      quick-tap-ms = <200>;
       #binding-cells = <2>;
       bindings = <&mo>, <&kp>;
-    };
-
-    adjust_p: mod_morph_adjust_p {
-      compatible = "zmk,behavior-mod-morph";
-      label = "MOD_MORPH_ADJUST_P";
-      #binding-cells = <0>;
-      bindings = <&lt ADJST P>, <&kp P>;
-      mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
     };
   };
 
@@ -62,37 +54,37 @@
     compatible = "zmk,keymap";
     default_layer {
       bindings = <
-                 &lt ADJST Q &kp W &kp E &kp R &kp T               &kp Y &kp U &kp I &kp O &adjust_p
-                 &lt RAISE A &kp S &kp D &kp F &kp G               &kp H &kp J &kp K &kp L &mp RALT APOS
-                 &mt LSHFT Z &kp X &kp C &kp V &kp B               &kp N &kp M &kp COMMA &kp DOT &mp RSHFT SLASH
-                 &lp LOWER RET &mp LCTRL TAB                       &mp LCMD BSPC &kp SPACE
+                 &mt LALT Q &kp W &kp E &kp R &kp T                  &kp Y &kp U &kp I &kp O &mt RALT P
+                 &mt LSHFT A &kp S &kp D &kp F &kp G                 &kp H &kp J &kp K &kp L &mt RSHFT SEMI
+                 &mt LCMD Z &kp X &kp C &kp V &kp B                  &kp N &kp M &kp COMMA &kp DOT &mt RCMD SLASH
+                 &lp LOWER TAB &mp LCTRL RET                         &kp SPACE &lp RAISE BSPC
                  >;
     };
 
     lower_layer {
       bindings = <
-                 &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
-                 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT &kp PLUS  &kp MINUS &kp EQUAL &kp LPAR  &kp RPAR
-                 &kp CARET &kp AMPS  &kp ASTRK &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT  &kp SEMI  &kp COLON &kp BSLH
-                 &sk LALT  &sk LCTRL                               &sk LCMD  &trans
+                 &none     &kp LBKT  &kp LBRC  &kp RBRC  &none     &kp CARET &kp LPAR  &kp RPAR  &kp RBKT  &kp TILDE
+                 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT &kp AMPS  &kp MINUS &kp EQUAL &kp BSLH  &kp GRAVE
+                 &none     &none     &none     &none     &none     &kp ASTRK &kp UNDER &kp PLUS  &kp PIPE  &none
+                 &trans    &trans                                  &kp DEL   &mo ADJST
                  >;
     };
 
     raise_layer {
       bindings = <
-                 &kp GRAVE &none     &none     &none     &kp CAPS  &kp INS   &kp PG_UP &kp UP    &kp PG_DN &kp TILDE
-                 &none     &none     &none     &none     &kp ESC   &kp DEL   &kp LEFT  &kp DOWN  &kp RIGHT &kp UNDER
-                 &kp K_APP &none     &none     &none     &kp TAB   &kp BSPC  &kp ENTER &kp HOME  &kp END   &kp PIPE
-                 &sk LALT  &sk LCTRL                               &sk LCMD  &trans
+                 &none      &kp N1    &kp N2    &kp N3    &kp C_VOL_UP &kp HOME  &kp PG_DN &kp PG_UP &kp END   &kp DQT
+                 &none      &kp N4    &kp N5    &kp N6    &kp C_VOL_DN &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp APOS
+                 &kp CAPS   &kp N7    &kp N8    &kp N9    &kp N0       &none     &none     &none     &none     &none
+                 &mo ADJST  &gresc                                     &trans    &trans
                  >;
     };
 
     adjust_layer {
       bindings = <
-                 &kp F1    &kp F2    &kp F3    &kp F4     &kp F5    &kp F6   &kp F7    &kp F8    &kp F9    &kp F10
-                 &kp F11   &kp F12   &kp PSCRN &none      &none     &none    &none     &none     &none     &kp RALT
-                 &out OUT_BLE &out OUT_USB &bt BT_CLR &bt BT_PRV &bt BT_NXT &none &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp RSHFT
-                 &sk RALT  &sk RCTRL                               &sk RCMD  &trans
+                 &bt BT_CLR   &kp F1    &kp F2    &kp F3    &kp F10   &none      &none     &none     &none     &kp PSCRN
+                 &bt BT_NXT   &kp F4    &kp F5    &kp F6    &kp F11   &none      &none     &none     &none     &kp INS
+                 &out OUT_TOG &kp F7    &kp F8    &kp F9    &kp F12   &none      &none     &none     &none     &none
+                 &trans    &trans                                     &none      &none
                  >;
     };
 
