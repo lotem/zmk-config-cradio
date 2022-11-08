@@ -85,37 +85,37 @@
     compatible = "zmk,keymap";
     default_layer {
       bindings = <
-                 &mt LALT Q &kp W &kp E &kp R &kp T                  &kp Y &kp U &kp I &kp O &alt_p
-                 &mt LSHFT A &kp S &kp D &kp F &kp G                 &kp H &kp J &kp K &kp L &mt RSHFT SEMI
-                 &mt LCMD Z &kp X &kp C &kp V &kp B                  &kp N &kp M &kp COMMA &kp DOT &mt RCMD SLASH
-                 &lp LOWER TAB &mp LCTRL RET                         &kp SPACE &lp RAISE BSPC
+                 &mt LALT Q     &kp W    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I      &kp O    &alt_p
+                 &mt LSHFT A    &kp S    &kp D    &kp F    &kp G    &kp H    &kp J    &kp K      &kp L    &mt RSHFT SEMI
+                 &mt LCMD Z     &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMMA  &kp DOT  &mt RCMD SLASH
+                 &lp LOWER TAB  &mp LCTRL RET                       &kp SPACE  &lp RAISE BSPC
                  >;
     };
 
     lower_layer {
       bindings = <
-                 &none     &kp LBKT  &kp LBRC  &kp RBRC  &none     &kp CARET &kp LPAR  &kp RPAR  &kp RBKT  &kp TILDE
-                 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT &kp AMPS  &kp MINUS &kp EQUAL &kp BSLH  &kp GRAVE
-                 &none     &none     &none     &none     &none     &kp ASTRK &kp UNDER &kp PLUS  &kp PIPE  &none
-                 &trans    &trans                                  &kp DEL   &mo ADJST
+                 &none     &kp LBKT  &kp LBRC  &kp RBRC  &none      &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+                 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &kp AMPS   &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
+                 &none     &none     &none     &none     &none      &kp ASTRK  &kp UNDER  &kp PLUS   &kp PIPE   &none
+                 &trans    &trans                                   &kp DEL    &mo ADJST
                  >;
     };
 
     raise_layer {
       bindings = <
-                 &kp PLUS   &kp N1    &kp N2    &kp N3    &kp COLON &kp HOME  &kp PG_DN &kp PG_UP &kp END   &kp DQT
-                 &kp MINUS  &kp N4    &kp N5    &kp N6    &kp DOT   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp APOS
-                 &kp CAPS   &kp N7    &kp N8    &kp N9    &kp N0    &none     &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none
-                 &mo ADJST  &gresc                                  &trans    &trans
+                 &kp PLUS    &kp N1   &kp N2   &kp N3   &kp COLON   &kp HOME  &kp PG_DN   &kp PG_UP     &kp END       &kp DQT
+                 &kp MINUS   &kp N4   &kp N5   &kp N6   &kp DOT     &kp LEFT  &kp DOWN    &kp UP        &kp RIGHT     &kp APOS
+                 &kp CAPS    &kp N7   &kp N8   &kp N9   &kp N0      &none     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none
+                 &mo ADJST   &gresc                                 &trans    &trans
                  >;
     };
 
     adjust_layer {
       bindings = <
-                 &bt BT_CLR   &kp F1    &kp F2    &kp F3    &kp F10   &none      &mwh MWH_U &mwh MWH_D &none      &kp PSCRN
-                 &bt BT_NXT   &kp F4    &kp F5    &kp F6    &kp F11   &mmv MMV_L &mmv MMV_D &mmv MMV_U &mmv MMV_R &kp INS
-                 &out OUT_TOG &kp F7    &kp F8    &kp F9    &kp F12   &none      &mkp MCLK  &mkp MB4   &mkp MB5   &none
-                 &trans    &trans                                     &mkp LCLK  &mkp RCLK
+                 &bt BT_CLR    &kp F1   &kp F2   &kp F3   &kp F10   &none       &mwh MWH_U  &mwh MWH_D  &none       &kp PSCRN
+                 &bt BT_NXT    &kp F4   &kp F5   &kp F6   &kp F11   &mmv MMV_L  &mmv MMV_D  &mmv MMV_U  &mmv MMV_R  &kp INS
+                 &out OUT_TOG  &kp F7   &kp F8   &kp F9   &kp F12   &none       &mkp MCLK   &mkp MB4    &mkp MB5    &none
+                 &trans        &trans                               &mkp LCLK   &mkp RCLK
                  >;
     };
 
