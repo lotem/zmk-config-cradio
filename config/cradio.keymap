@@ -71,14 +71,6 @@
       #binding-cells = <2>;
       bindings = <&mo>, <&kp>;
     };
-
-    cmd_p: mod_morph_cmd_p {
-      compatible = "zmk,behavior-mod-morph";
-      label = "mod_morph_cmd_p";
-      #binding-cells = <0>;
-      bindings = <&mt RCMD P>, <&kp P>;
-      mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
-    };
   };
 
   keymap {
@@ -94,28 +86,28 @@
 
     lower_layer {
       bindings = <
-                 &none     &kp LBKT  &kp LBRC  &kp RBRC  &none      &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
-                 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &kp AMPS   &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
-                 &none     &none     &none     &none     &none      &kp ASTRK  &kp UNDER  &kp PLUS   &kp PIPE   &trans
+                 &kp GRAVE &kp LBKT  &kp LBRC  &kp RBRC  &kp RBKT   &kp BSLH   &kp MINUS  &kp EQUAL  &kp SEMI   &kp APOS
+                 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR
+                 &kp TILDE &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PP &kp PIPE &kp UNDER &kp PLUS &kp COLON  &kp DQT
                  &trans    &trans                                   &kp DEL    &mo ADJST
                  >;
     };
 
     raise_layer {
       bindings = <
-                 &kp PLUS    &kp N1   &kp N2   &kp N3   &kp COLON   &kp HOME  &kp PG_DN   &kp PG_UP     &kp END       &kp COLON
-                 &kp MINUS   &kp N4   &kp N5   &kp N6   &kp DOT     &kp LEFT  &kp DOWN    &kp UP        &kp RIGHT     &kp SEMI
-                 &kp CAPS    &kp N7   &kp N8   &kp N9   &kp N0      &none     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans
+                 &kp F1   &kp F2   &kp F3   &kp F4   &kp F5         &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp F11
+                 &kp N1   &kp N2   &kp N3   &kp N4   &kp N5         &kp N6    &kp N7     &kp N8     &kp N9     &kp N0
+                 &kp F6   &kp F7   &kp F8   &kp F9   &kp F10        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp F12
                  &mo ADJST   &gresc                                 &trans    &trans
                  >;
     };
 
     adjust_layer {
       bindings = <
-                 &bt BT_CLR    &kp F1   &kp F2   &kp F3   &kp F10   &none       &mwh MWH_U  &mwh MWH_D  &none       &kp PSCRN
-                 &bt BT_NXT    &kp F4   &kp F5   &kp F6   &kp F11   &mmv MMV_L  &mmv MMV_D  &mmv MMV_U  &mmv MMV_R  &kp INS
-                 &out OUT_TOG  &kp F7   &kp F8   &kp F9   &kp F12   &none       &mkp MCLK   &mkp MB4    &mkp MB5    &trans
-                 &trans        &trans                               &mkp LCLK   &mkp RCLK
+                 &bt BT_CLR    &none    &none    &none    &none    &none       &mwh MWH_U  &mwh MWH_D  &none       &kp PSCRN
+                 &bt BT_NXT    &none    &none    &none    &none    &mmv MMV_L  &mmv MMV_D  &mmv MMV_U  &mmv MMV_R  &kp INS
+                 &out OUT_TOG  &none    &none    &none    &none    &none       &mkp MCLK   &mkp MB4    &mkp MB5    &trans
+                 &trans        &trans                              &mkp LCLK   &mkp RCLK
                  >;
     };
 
