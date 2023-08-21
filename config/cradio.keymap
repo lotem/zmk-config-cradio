@@ -71,51 +71,43 @@
       #binding-cells = <2>;
       bindings = <&mo>, <&kp>;
     };
-
-    rctrl_p: mod_morph_rctrl_p {
-      compatible = "zmk,behavior-mod-morph";
-      label = "mod_morph_rctrl_p";
-      #binding-cells = <0>;
-      bindings = <&mt RCTRL P>, <&kp P>;
-      mods = <MOD_LCTL>;
-    };
   };
 
   keymap {
     compatible = "zmk,keymap";
     default_layer {
       bindings = <
-                 &mt LCTRL Q    &kp W    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I      &kp O    &rctrl_p
+                 &kp Q          &kp W    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I      &kp O    &kp P
                  &mt LSHFT A    &kp S    &kp D    &kp F    &kp G    &kp H    &kp J    &kp K      &kp L    &mt RSHFT APOS
-                 &mt LALT Z     &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMMA  &kp DOT  &mt RALT SLASH
-                 &lp LOWER TAB  &mp LCMD RET                        &kp SPACE  &lp RAISE BSPC
+                 &mt LCMD Z     &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMMA  &kp DOT  &mt RALT SLASH
+                 &lp LOWER TAB  &mp LCTRL RET                       &kp SPACE  &lp RAISE BSPC
                  >;
     };
 
     lower_layer {
       bindings = <
-                 &none     &kp LBKT  &kp LBRC  &kp RBRC  &none      &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
-                 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &kp AMPS   &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
-                 &none     &none     &none     &none     &none      &kp ASTRK  &kp UNDER  &kp PLUS   &kp PIPE   &trans
-                 &trans    &trans                                   &mp RCMD SPACE  &mo ADJST
+                 &none     &kp LBKT  &kp LBRC   &kp RBRC   &none      &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+                 &kp EXCL  &kp AT    &kp HASH   &kp DLLR   &kp PRCNT  &kp AMPS   &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
+                 &sk LCMD  &sk LALT  &sk LCTRL  &sk LSHFT  &none      &kp ASTRK  &kp UNDER  &kp PLUS   &kp PIPE   &trans
+                 &trans    &trans                                     &trans     &mo ADJST
                  >;
     };
 
     raise_layer {
       bindings = <
-                 &kp INS     &kp N1   &kp N2   &kp N3   &kp MINUS   &kp HOME  &kp PG_DN   &kp PG_UP     &kp END       &kp COLON
-                 &kp DEL     &kp N4   &kp N5   &kp N6   &kp DOT     &kp LEFT  &kp DOWN    &kp UP        &kp RIGHT     &kp SEMI
-                 &kp CAPS    &kp N7   &kp N8   &kp N9   &kp N0      &none     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans
+                 &kp INS     &kp N1   &kp N2   &kp N3   &kp MINUS   &kp HOME  &kp PG_DN     &kp PG_UP     &kp END     &kp COLON
+                 &kp DEL     &kp N4   &kp N5   &kp N6   &kp DOT     &kp LEFT  &kp DOWN      &kp UP        &kp RIGHT   &kp SEMI
+                 &kp CAPS    &kp N7   &kp N8   &kp N9   &kp N0      &none     &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &trans
                  &mo ADJST   &kp ESC                                &trans    &trans
                  >;
     };
 
     adjust_layer {
       bindings = <
-                 &bt BT_CLR    &kp F1   &kp F2   &kp F3   &kp F10   &none       &mwh MWH_U  &mwh MWH_D  &none       &kp PSCRN
-                 &bt BT_NXT    &kp F4   &kp F5   &kp F6   &kp F11   &mmv MMV_L  &mmv MMV_D  &mmv MMV_U  &mmv MMV_R  &trans
-                 &out OUT_TOG  &kp F7   &kp F8   &kp F9   &kp F12   &none       &mkp LCLK   &mkp RCLK   &mkp MCLK   &trans
-                 &trans        &trans                               &mkp LCLK   &mkp RCLK
+                 &bt BT_SEL 0  &kp F1   &kp F2   &kp F3   &kp F10   &none       &mwh MWH_U  &mwh MWH_D  &none       &kp PSCRN
+                 &bt BT_SEL 1  &kp F4   &kp F5   &kp F6   &kp F11   &mmv MMV_L  &mmv MMV_D  &mmv MMV_U  &mmv MMV_R  &trans
+                 &bt BT_SEL 2  &kp F7   &kp F8   &kp F9   &kp F12   &none       &mkp LCLK   &mkp RCLK   &mkp MCLK   &trans
+                 &bt BT_CLR    &out OUT_TOG                         &mkp LCLK   &mkp RCLK
                  >;
     };
 
