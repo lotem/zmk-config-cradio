@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors.dtsi>
 #include <dt-bindings/zmk/mouse.h>
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
@@ -79,19 +79,19 @@
 
         default_layer {
             bindings = <
-&mt LGUI Q   &kp W  &kp E  &kp R      &kp T          &kp Y      &kp U       &kp I      &kp O    &mt RALT P
+&mt LCTRL Q  &kp W  &kp E  &kp R      &kp T          &kp Y      &kp U       &kp I      &kp O    &mt RCTRL P
 &mt LSHFT A  &kp S  &kp D  &kp F      &kp G          &kp H      &kp J       &kp K      &kp L    &mt RSHFT APOS
-&mt LCTRL Z  &kp X  &kp C  &kp V      &kp B          &kp N      &kp M       &kp COMMA  &kp DOT  &mt RCTRL SLASH
+&mt LGUI Z   &kp X  &kp C  &kp V      &kp B          &kp N      &kp M       &kp COMMA  &kp DOT  &mt RALT SLASH
                            &lh 1 TAB  &lh 2 ENTER    &kp SPACE  &lh 1 BSPC
             >;
         };
 
         lower_layer {
             bindings = <
-&none      &kp LBKT  &kp LBRC  &kp RBRC    &none        &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT  &kp TILDE
-&kp EXCL   &kp AT    &kp HASH  &kp DLLR    &kp PRCNT    &kp AMPS   &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE
-&sk LCTRL  &sk LALT  &sk LGUI  &sk LSHIFT  &none        &kp ASTRK  &kp UNDER  &kp PLUS   &kp PIPE  &kp SLASH
-                               &lh 3 ESC   &trans       &trans     &lh 3 DEL
+&none     &kp LBKT  &kp LBRC  &kp RBRC   &none        &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT  &kp TILDE
+&kp EXCL  &kp AT    &kp HASH  &kp DLLR   &kp PRCNT    &kp AMPS   &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE
+&sk LALT  &none     &none     &none      &none        &kp ASTRK  &kp UNDER  &kp PLUS   &kp PIPE  &mt RGUI SLASH
+                              &lh 3 ESC  &trans       &trans     &lh 3 DEL
             >;
         };
 
