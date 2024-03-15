@@ -79,19 +79,19 @@
 
         default_layer {
             bindings = <
-&mt LCTRL Q  &kp W  &kp E  &kp R      &kp T          &kp Y      &kp U       &kp I      &kp O    &mt RCTRL P
+&mt LGUI Q   &kp W  &kp E  &kp R      &kp T          &kp Y      &kp U       &kp I      &kp O    &mt RALT P
 &mt LSHFT A  &kp S  &kp D  &kp F      &kp G          &kp H      &kp J       &kp K      &kp L    &mt RSHFT APOS
-&mt LGUI Z   &kp X  &kp C  &kp V      &kp B          &kp N      &kp M       &kp COMMA  &kp DOT  &mt RALT SLASH
+&mt LCTRL Z  &kp X  &kp C  &kp V      &kp B          &kp N      &kp M       &kp COMMA  &kp DOT  &mt RCTRL SLASH
                            &lh 1 TAB  &lh 2 ENTER    &kp SPACE  &lh 1 BSPC
             >;
         };
 
         lower_layer {
             bindings = <
-&none     &kp LBKT  &kp LBRC  &kp RBRC   &none        &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT  &kp TILDE
-&kp EXCL  &kp AT    &kp HASH  &kp DLLR   &kp PRCNT    &kp AMPS   &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE
-&sk LALT  &none     &none     &none      &none        &kp ASTRK  &kp UNDER  &kp PLUS   &kp PIPE  &mt RGUI SLASH
-                              &lh 3 ESC  &trans       &trans     &lh 3 DEL
+&none     &kp LBKT  &kp LBRC  &kp RBRC      &none          &kp CARET  &kp LPAR         &kp RPAR   &kp RBKT  &kp TILDE
+&kp EXCL  &kp AT    &kp HASH  &kp DLLR      &kp PRCNT      &kp AMPS   &kp MINUS        &kp EQUAL  &kp BSLH  &kp GRAVE
+&kp LALT  &none     &none     &none         &none          &kp ASTRK  &kp UNDER        &kp PLUS   &kp PIPE  &mt RALT SLASH
+                              &mh LGUI ESC  &lh 3 ENTER    &trans     &mh RGUI DELETE
             >;
         };
 
@@ -100,7 +100,7 @@
 &kp INS   &kp HOME    &kp UP        &kp END       &kp PG_UP           &kp MINUS  &kp N7   &kp N8  &kp N9  &kp COLON
 &kp DEL   &kp LEFT    &kp DOWN      &kp RIGHT     &kp PG_DN           &kp PLUS   &kp N4   &kp N5  &kp N6  &kp SEMI
 &kp CAPS  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PLAY_PAUSE    &kp ASTRK  &kp N1   &kp N2  &kp N3  &kp SLASH
-                                    &kp ESC       &trans              &kp N0     &kp DOT
+                                    &lh 3 ESC     &trans              &kp N0     &kp DOT
             >;
         };
 
