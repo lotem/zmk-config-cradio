@@ -7,10 +7,10 @@ manifest:
       url-base: https://github.com/benvallack
   projects:
     - name: zmk
-      # remote: zmkfirmware
-      # revision: main
-      remote: benvallack
-      revision: repeatrollfix-tapdance-macro-mouse-dongle
+      remote: zmkfirmware
+      revision: main
+      # remote: benvallack
+      # revision: repeatrollfix-tapdance-macro-mouse-dongle
       import: app/west.yml
   self:
     path: config
