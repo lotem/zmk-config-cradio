@@ -7,37 +7,12 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFLT 0
 #define LOWER 1
 #define RAISE 2
 #define ADJST 3
-
-// mouse move settings
-
-#define MMV_U MOVE_VERT(-650)
-#define MMV_D MOVE_VERT(650)
-#define MMV_L MOVE_HOR(-650)
-#define MMV_R MOVE_HOR(650)
-
-&mmv {
-    time-to-max-speed-ms = <500>;
-    acceleration-exponent = <1>;
-};
-
-// mouse wheel settings
-
-#define MWH_U SCROLL_VERT(15)
-#define MWH_D SCROLL_VERT(-15)
-#define MWH_L SCROLL_HOR(-15)
-#define MWH_R SCROLL_HOR(15)
-
-&mwh {
-    time-to-max-speed-ms = <2000>;
-    acceleration-exponent = <0>;
-};
 
 &mt {
     flavor = "tap-preferred";
@@ -106,10 +81,10 @@
 
         adjust_layer {
             bindings = <
-&kp F1        &kp F2        &kp F3        &kp F4      &kp F5          &mwh MWH_U  &mkp LCLK   &mmv MMV_U  &mkp RCLK   &kp PSCRN
-&kp F6        &kp F7        &kp F8        &kp F9      &kp F10         &mwh MWH_D  &mmv MMV_L  &mmv MMV_D  &mmv MMV_R  &none
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp F11     &kp F12         &none       &none       &none       &none       &none
-                                          &bt BT_CLR  &out OUT_TOG    &mkp LCLK   &mkp RCLK
+&kp F1        &kp F2        &kp F3        &kp F4      &kp F5          &none       &none       &none       &none       &trans
+&kp F6        &kp F7        &kp F8        &kp F9      &kp F10         &none       &none       &none       &none       &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp F11     &kp F12         &none       &none       &none       &none       &trans
+                                          &bt BT_CLR  &out OUT_TOG    &trans      &trans
             >;
         };
     };
