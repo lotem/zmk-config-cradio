@@ -2,7 +2,6 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-  remotes:
     - name: benvallack
       url-base: https://github.com/benvallack
   projects:
