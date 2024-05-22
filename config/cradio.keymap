@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFLT 0
@@ -88,10 +88,10 @@
 
         lower_layer {
             bindings = <
-&none     &kp LBKT  &kp LBRC  &kp RBRC      &none          &kp CARET  &kp LPAR         &kp RPAR   &kp RBKT  &kp TILDE
-&kp EXCL  &kp AT    &kp HASH  &kp DLLR      &kp PRCNT      &kp AMPS   &kp MINUS        &kp EQUAL  &kp BSLH  &kp GRAVE
-&kp LALT  &none     &none     &none         &none          &kp ASTRK  &kp UNDER        &kp PLUS   &kp PIPE  &mt RALT SLASH
-                              &mh LGUI ESC  &lh 3 ENTER    &trans     &mh RGUI DELETE
+&none     &kp LBKT  &kp LBRC  &kp RBRC      &none          &kp CARET   &kp LPAR         &kp RPAR   &kp RBKT  &kp TILDE
+&kp EXCL  &kp AT    &kp HASH  &kp DLLR      &kp PRCNT      &kp AMPS    &kp MINUS        &kp EQUAL  &kp BSLH  &kp GRAVE
+&kp LALT  &none     &none     &none         &none          &kp ASTRK   &kp UNDER        &kp PLUS   &kp PIPE  &mt RALT SLASH
+                              &mh LGUI ESC  &lh 3 ENTER    &caps_word  &mh RGUI DELETE
             >;
         };
 
