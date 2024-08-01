@@ -54,37 +54,37 @@
 
         default_layer {
             bindings = <
-&mt LGUI Q   &kp W  &kp E  &kp R      &kp T          &kp Y      &kp U       &kp I      &kp O    &mt RALT P
-&mt LSHFT A  &kp S  &kp D  &kp F      &kp G          &kp H      &kp J       &kp K      &kp L    &mt RSHFT APOS
-&mt LCTRL Z  &kp X  &kp C  &kp V      &kp B          &kp N      &kp M       &kp COMMA  &kp DOT  &mt RCTRL SLASH
-                           &lh 1 TAB  &lh 2 ENTER    &kp SPACE  &lh 1 BSPC
+&mt LGUI Q   &kp W  &kp E  &kp R      &kp T              &kp Y      &kp U       &kp I      &kp O    &mt RALT P
+&kp A        &kp S  &kp D  &kp F      &kp G              &kp H      &kp J       &kp K      &kp L    &kp APOS
+&mt LCTRL Z  &kp X  &kp C  &kp V      &kp B              &kp N      &kp M       &kp COMMA  &kp DOT  &mt RCTRL SLASH
+                           &lh 1 TAB  &mt LSHFT ENTER    &kp SPACE  &lh 2 BSPC
             >;
         };
 
         lower_layer {
             bindings = <
-&none     &kp LBKT  &kp LBRC  &kp RBRC      &none          &kp CARET   &kp LPAR         &kp RPAR   &kp RBKT  &kp TILDE
-&kp EXCL  &kp AT    &kp HASH  &kp DLLR      &kp PRCNT      &kp AMPS    &kp MINUS        &kp EQUAL  &kp BSLH  &kp GRAVE
-&kp LALT  &none     &none     &none         &none          &kp ASTRK   &kp UNDER        &kp PLUS   &kp PIPE  &mt RALT SLASH
-                              &mh LGUI ESC  &lh 3 ENTER    &caps_word  &mh RGUI DELETE
+&none     &kp LBKT  &kp LBRC  &kp RBRC   &none        &kp CARET        &kp LPAR      &kp RPAR   &kp RBKT  &kp TILDE
+&kp EXCL  &kp AT    &kp HASH  &kp DLLR   &kp PRCNT    &kp AMPS         &kp MINUS     &kp EQUAL  &kp BSLH  &kp GRAVE
+&kp LALT  &none     &none     &none      &none        &kp ASTRK        &kp UNDER     &kp PLUS   &kp PIPE  &mt RGUI SLASH
+                              &lh 3 ESC  &trans       &mh RSHFT SPACE  &lh 3 DELETE
             >;
         };
 
         raise_layer {
             bindings = <
-&kp INS   &kp HOME    &kp UP        &kp END       &kp PG_UP           &kp MINUS  &kp N7   &kp N8  &kp N9  &kp COLON
-&kp DEL   &kp LEFT    &kp DOWN      &kp RIGHT     &kp PG_DN           &kp PLUS   &kp N4   &kp N5  &kp N6  &kp SEMI
-&kp CAPS  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PLAY_PAUSE    &kp ASTRK  &kp N1   &kp N2  &kp N3  &kp SLASH
-                                    &lh 3 ESC     &trans              &kp N0     &kp DOT
+&kp INS     &kp N1  &kp N2  &kp N3     &kp PLUS     &kp HOME   &kp PG_DN   &kp PG_UP     &kp END       &kp COLON
+&kp DEL     &kp N4  &kp N5  &kp N6     &kp MINUS    &kp LEFT   &kp DOWN    &kp UP        &kp RIGHT     &kp SEMI
+&caps_word  &kp N7  &kp N8  &kp N9     &kp N0       &none      &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp SLASH
+                            &lh 3 ESC  &kp LSHFT    &kp RSHFT  &trans
             >;
         };
 
         adjust_layer {
             bindings = <
-&kp F1        &kp F2        &kp F3        &kp F4      &kp F5          &none       &none       &none       &none       &trans
-&kp F6        &kp F7        &kp F8        &kp F9      &kp F10         &none       &none       &none       &none       &trans
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp F11     &kp F12         &none       &none       &none       &none       &trans
-                                          &bt BT_CLR  &out OUT_TOG    &trans      &trans
+&kp F1   &kp F2   &kp F3     &kp F4  &kp F5     &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &out OUT_TOG
+&kp F6   &kp F7   &kp F8     &kp F9  &kp F10    &none       &none         &none         &none         &trans
+&kp F11  &kp F12  &kp PSCRN  &none   &none      &none       &none         &none         &none         &trans
+                             &trans  &trans     &trans      &trans
             >;
         };
     };
