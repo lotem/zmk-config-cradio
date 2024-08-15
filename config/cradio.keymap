@@ -53,8 +53,8 @@
 
         default_layer {
             bindings = <
-&kp Q         &kp W  &kp E  &kp R       &kp T               &kp Y      &kp U        &kp I      &kp O    &kp P
-&kp A         &kp S  &kp D  &kp F       &kp G               &kp H      &kp J        &kp K      &kp L    &mt RCTRL APOS
+&mt LGUI Q    &kp W  &kp E  &kp R       &kp T               &kp Y      &kp U        &kp I      &kp O    &kp P
+&kp A         &kp S  &kp D  &kp F       &kp G               &kp H      &kp J        &kp K      &kp L    &mt RALT APOS
 &mt LSHIFT Z  &kp X  &kp C  &kp V       &kp B               &kp N      &kp M        &kp COMMA  &kp DOT  &mt RSHIFT SLASH
                             &ltq 1 TAB  &mtq LCTRL ENTER    &kp SPACE  &ltq 2 BSPC
             >;
@@ -80,7 +80,7 @@
 
         adjust_layer {
             bindings = <
-&trans      &kp F1  &kp F2   &kp F3   &kp F4     &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp PSCRN
+&none       &kp F1  &kp F2   &kp F3   &kp F4     &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp PSCRN
 &none       &kp F5  &kp F6   &kp F7   &kp F8     &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP      &none
 &kp LSHIFT  &kp F9  &kp F10  &kp F11  &kp F12    &none       &kp RGUI      &kp RALT      &kp RCTRL     &kp RSHIFT
                              &trans   &trans     &trans      &trans
