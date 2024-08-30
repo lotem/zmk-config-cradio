@@ -53,10 +53,10 @@
 
         default_layer {
             bindings = <
-&kp Q        &kp W  &kp E  &kp R       &kp T                &kp Y      &kp U        &kp I           &kp O         &kp P
-&kp A        &kp S  &kp D  &kp F       &kp G                &kp H      &kp J        &kp K           &kp L         &mt RSHIFT APOS
-&mt LCTRL Z  &kp X  &kp C  &kp V       &kp B                &kp N      &kp M        &mt RGUI COMMA  &mt RALT DOT  &mt RCTRL SLASH
-                           &ltq 1 TAB  &mtq LSHIFT ENTER    &kp SPACE  &ltq 2 BSPC
+&kp Q         &kp W  &kp E  &kp R       &kp T               &kp Y      &kp U        &kp I           &kp O         &kp P
+&mt LSHIFT A  &kp S  &kp D  &kp F       &kp G               &kp H      &kp J        &kp K           &kp L         &mt RSHIFT APOS
+&mt LCTRL Z   &kp X  &kp C  &kp V       &kp B               &kp N      &kp M        &mt RGUI COMMA  &mt RALT DOT  &mt RCTRL SLASH
+                            &ltq 1 TAB  &mtq LCTRL ENTER    &kp SPACE  &ltq 2 BSPC
             >;
         };
 
@@ -80,10 +80,10 @@
 
         adjust_layer {
             bindings = <
-&none      &kp F1  &kp F2   &kp F3   &kp F4     &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp PSCRN
-&none      &kp F5  &kp F6   &kp F7   &kp F8     &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP      &none
-&kp LCTRL  &kp F9  &kp F10  &kp F11  &kp F12    &none       &kp RSHFT     &kp RGUI      &kp RALT      &kp RCTRL
-                            &trans   &trans     &trans      &trans
+&none  &kp F1  &kp F2   &kp F3   &kp F4     &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp PSCRN
+&none  &kp F5  &kp F6   &kp F7   &kp F8     &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP      &none
+&none  &kp F9  &kp F10  &kp F11  &kp F12    &none       &kp RSHFT     &kp RGUI      &kp RALT      &kp RCTRL
+                        &trans   &trans     &trans      &trans
             >;
         };
     };
