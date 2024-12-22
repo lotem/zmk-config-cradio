@@ -53,36 +53,45 @@
 
         default_layer {
             bindings = <
-&kp Q        &kp W  &kp E  &kp R       &kp T               &kp Y      &kp U        &kp I           &kp O          &kp P
-&kp A        &kp S  &kp D  &kp F       &kp G               &kp H      &kp J        &kp K           &kp L          &mt RGUI APOS
-&mt LSHFT Z  &kp X  &kp C  &kp V       &kp B               &kp N      &kp M        &mt RALT COMMA  &mt RCTRL DOT  &mt RSHFT SLASH
-                           &ltq 1 TAB  &mtq LCTRL ENTER    &kp SPACE  &ltq 2 BSPC
+&kp Q        &kp W  &kp E  &kp R       &kp T               &kp Y      &kp U        &kp I      &kp O    &kp P
+&kp A        &kp S  &kp D  &kp F       &kp G               &kp H      &kp J        &kp K      &kp L    &mt RGUI APOS
+&mt LSHFT Z  &kp X  &kp C  &kp V       &kp B               &kp N      &kp M        &kp COMMA  &kp DOT  &mt RSHFT SLASH
+                           &ltq 2 TAB  &mtq LCTRL ENTER    &kp SPACE  &ltq 3 BSPC
+            >;
+        };
+
+        mod_layer {
+            bindings = <
+&trans      &trans      &trans       &trans       &trans    &trans  &trans       &trans       &trans      &trans
+&mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &trans    &trans  &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI APOS
+&trans      &trans      &trans       &trans       &trans    &trans  &trans       &trans       &trans      &trans
+                                     &trans       &trans    &trans  &trans
             >;
         };
 
         lower_layer {
             bindings = <
-&kp GRAVE  &kp LBKT   &kp LBRC  &kp RBRC  &kp TILDE    &kp CARET   &kp LPAR    &kp RPAR   &kp RBKT   &kp PIPE
-&kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT    &kp AMPS    &kp MINUS   &kp EQUAL  &kp SEMI   &kp SQT
-&kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &kp BSLH     &kp ASTRK   &kp UNDER   &kp PLUS   &kp COLON  &kp DQT
-                                &trans    &trans       &caps_word  &ltq 3 DEL
+&kp EXCL        &kp AT         &kp HASH        &kp DLLR        &kp PRCNT    &kp CARET   &kp AMPS    &kp ASTRK  &kp LPAR   &kp RPAR
+&mt LGUI GRAVE  &mt LALT BSLH  &mt LCTRL LBKT  &mt LSHFT RBKT  &none        &none       &kp MINUS   &kp EQUAL  &kp SEMI   &kp SQT
+&kp TILDE       &kp PIPE       &kp LBRC        &kp RBRC        &none        &none       &kp UNDER   &kp PLUS   &kp COLON  &kp DQT
+                                               &trans          &tog 1       &caps_word  &ltq 4 DEL
             >;
         };
 
         raise_layer {
             bindings = <
-&kp ESC   &kp N1  &kp N2  &kp N3      &kp PLUS     &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp INS
-&kp TAB   &kp N4  &kp N5  &kp N6      &kp MINUS    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp DEL
-&kp CAPS  &kp N7  &kp N8  &kp N9      &kp N0       &kp ASTRK  &kp RGUI   &trans     &trans     &trans
-                          &ltq 3 ESC  &trans       &trans     &trans
+&kp ESC   &kp N1  &kp N2  &kp N3      &kp COLON    &kp HOME  &kp PG_DN       &kp PG_UP     &kp END         &kp INS
+&kp TAB   &kp N4  &kp N5  &kp N6      &kp DOT      &kp LEFT  &mt RSHFT DOWN  &mt RCTRL UP  &mt RALT RIGHT  &mt RGUI DEL
+&kp CAPS  &kp N7  &kp N8  &kp N9      &kp N0       &none     &kp PLUS        &kp MINUS     &kp ASTRK       &kp FSLH
+                          &ltq 4 ESC  &trans       &trans    &trans
             >;
         };
 
         adjust_layer {
             bindings = <
 &none  &kp F1  &kp F2   &kp F3   &kp F4     &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp PSCRN
-&none  &kp F5  &kp F6   &kp F7   &kp F8     &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP      &none
-&none  &kp F9  &kp F10  &kp F11  &kp F12    &none       &kp RGUI      &kp RALT      &kp RCTRL     &kp RSHFT
+&none  &kp F5  &kp F6   &kp F7   &kp F8     &none       &kp RSHFT     &kp RCTRL     &kp RALT      &kp RGUI
+&none  &kp F9  &kp F10  &kp F11  &kp F12    &none       &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP
                         &trans   &trans     &trans      &trans
             >;
         };
