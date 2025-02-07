@@ -54,27 +54,27 @@
         default_layer {
             bindings = <
 &kp Q        &kp W  &kp E  &kp R       &kp T               &kp Y      &kp U        &kp I           &kp O         &kp P
-&kp A        &kp S  &kp D  &kp F       &kp G               &kp H      &kp J        &kp K           &kp L         &mt RCTRL APOS
-&mt LSHFT Z  &kp X  &kp C  &kp V       &kp B               &kp N      &kp M        &mt RALT COMMA  &mt RGUI DOT  &mt RSHFT SLASH
+&kp A        &kp S  &kp D  &kp F       &kp G               &kp H      &kp J        &kp K           &kp L         &mt RSHFT APOS
+&mt LSHFT Z  &kp X  &kp C  &kp V       &kp B               &kp N      &kp M        &mt RGUI COMMA  &mt RALT DOT  &mt RCTRL SLASH
                            &ltq 1 TAB  &mtq LCTRL ENTER    &kp SPACE  &ltq 2 BSPC
             >;
         };
 
         lower_layer {
             bindings = <
-&none      &kp LBKT  &kp LBRC  &kp RBRC   &none        &kp CARET   &kp LPAR       &kp RPAR   &kp RBKT  &kp TILDE
-&kp EXCL   &kp AT    &kp HASH  &kp DLLR   &kp PRCNT    &kp AMPS    &kp MINUS      &kp EQUAL  &kp BSLH  &kp GRAVE
-&kp LSHFT  &kp LGUI  &kp LALT  &kp LCTRL  &none        &kp ASTRK   &kp UNDER      &kp PLUS   &kp PIPE  &kp SLASH
-                               &trans     &trans       &caps_word  &ltq 3 DELETE
+&none      &kp LBKT   &kp LBRC  &kp RBRC  &none        &kp CARET   &kp LPAR       &kp RPAR   &kp RBKT  &kp TILDE
+&kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT    &kp AMPS    &kp MINUS      &kp EQUAL  &kp BSLH  &kp GRAVE
+&kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none        &kp ASTRK   &kp UNDER      &kp PLUS   &kp PIPE  &kp SLASH
+                                &trans    &trans       &caps_word  &ltq 3 DELETE
             >;
         };
 
         raise_layer {
             bindings = <
-&kp INS   &kp N1  &kp N2  &kp N3      &kp PLUS     &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
-&kp DEL   &kp N4  &kp N5  &kp N6      &kp MINUS    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp SEMI
-&kp CAPS  &kp N7  &kp N8  &kp N9      &kp N0       &kp ASTRK  &kp RCTRL  &trans     &trans     &trans
-                          &ltq 3 ESC  &trans       &trans     &trans
+&kp INS   &kp N1  &kp N2  &kp N3      &kp PLUS     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+&kp DEL   &kp N4  &kp N5  &kp N6      &kp MINUS    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp SEMI
+&kp CAPS  &kp N7  &kp N8  &kp N9      &kp N0       &none     &kp RGUI   &kp RALT   &kp RCTRL  &kp RSHFT
+                          &ltq 3 ESC  &trans       &trans    &trans
             >;
         };
 
@@ -82,7 +82,7 @@
             bindings = <
 &none  &kp F1  &kp F2   &kp F3   &kp F4     &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp PSCRN
 &none  &kp F5  &kp F6   &kp F7   &kp F8     &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP      &none
-&none  &kp F9  &kp F10  &kp F11  &kp F12    &none       &kp RCTRL     &kp RALT      &kp RGUI      &kp RSHFT
+&none  &kp F9  &kp F10  &kp F11  &kp F12    &none       &kp RGUI      &kp RALT      &kp RCTRL     &kp RSHFT
                         &trans   &trans     &trans      &trans
             >;
         };
