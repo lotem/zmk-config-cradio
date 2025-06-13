@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define DEFLT 0
 #define LOWER 1
@@ -62,27 +63,27 @@
 
         lower_layer {
             bindings = <
-&none      &kp LBKT   &kp LBRC  &kp RBRC  &none        &kp CARET  &kp LPAR    &kp RPAR   &kp RBKT  &kp TILDE
-&kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT    &kp AMPS   &kp MINUS   &kp EQUAL  &kp BSLH  &kp GRAVE
-&kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none        &kp ASTRK  &kp UNDER   &kp PLUS   &kp PIPE  &kp SLASH
-                                &trans    &trans       &trans     &ltq 3 DEL
+&none      &kp LBKT   &kp LBRC  &kp RBRC  &none        &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT  &kp TILDE
+&kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT    &kp AMPS   &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE
+&kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none        &kp ASTRK  &kp UNDER  &kp PLUS   &kp PIPE  &kp SLASH
+                                &trans    &trans       &trans     &mo 3
             >;
         };
 
         raise_layer {
             bindings = <
-&kp INS   &kp N1  &kp N2  &kp N3      &kp MINUS    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
-&kp DEL   &kp N4  &kp N5  &kp N6      &kp DOT      &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp SEMI
-&kp CAPS  &kp N7  &kp N8  &kp N9      &kp N0       &none     &kp RGUI   &kp RALT   &kp RCTRL  &kp RSHFT
-                          &ltq 3 ESC  &trans       &trans    &trans
+&kp INS   &kp N1  &kp N2  &kp N3  &kp MINUS    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+&kp DEL   &kp N4  &kp N5  &kp N6  &kp DOT      &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp SEMI
+&kp CAPS  &kp N7  &kp N8  &kp N9  &kp N0       &none     &kp RGUI   &kp RALT   &kp RCTRL  &kp RSHFT
+                          &mo 3   &kp ESC      &trans    &trans
             >;
         };
 
         adjust_layer {
             bindings = <
-&none  &kp F1  &kp F2   &kp F3   &kp F4     &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp PSCRN
+&none  &kp F1  &kp F2   &kp F3   &kp F4     &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &out OUT_TOG
 &none  &kp F5  &kp F6   &kp F7   &kp F8     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP      &kp C_NEXT
-&none  &kp F9  &kp F10  &kp F11  &kp F12    &none       &kp RGUI      &kp RALT      &kp RCTRL     &kp RSHFT
+&none  &kp F9  &kp F10  &kp F11  &kp F12    &kp PSCRN   &kp RGUI      &kp RALT      &kp RCTRL     &kp RSHFT
                         &trans   &trans     &trans      &trans
             >;
         };
